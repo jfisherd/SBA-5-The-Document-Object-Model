@@ -8,10 +8,14 @@ contentError = document.getElementById("contentError")
 submit = document.getElementById("submit")
 blogs = document.getElementById("blogs")
 
-function checkValidity() { // EDGE CASE, ONE IS LEFT BLANK THEN THE OTHER IS LEFT BLANK, BE SURE TO DELETE OLD ERROR MESSAGE
+function checkValidity() { 
+    
+    titleError.textContent = ''
+    contentError.textContent = ''
+
     postValid = true
     if (title.value == '') {
-        titleError.textContent = 'Title cannot be blank'
+        titleError.textContent = 'Title cannot be blank' 
         postValid = false
     }
     if (content.value == '') {
