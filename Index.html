@@ -9,8 +9,10 @@
 </head>
 <body>
     <form> <!-- novalidate? -->
-        <input id="title" placeholder="Enter Title" required>
+        <label for="title">Enter Title</label>
+        <input id="title" placeholder="Blog Title" required>
         <span id="titleError"></span>
+        <label for="content">Enter blog content</label>
         <textarea id="content" placeholder="Enter your post here" required></textarea>
         <span id="contentError"></span>
         <button id="submit">Submit Post</button>
