@@ -1,4 +1,4 @@
-myPosts = [] 
+myPosts = []
 
 title = document.getElementById("title")
 titleError = document.getElementById("titleError")
@@ -8,24 +8,21 @@ submit = document.getElementById("submit")
 blogs = document.getElementById("blogs")
 
 
-
 submit.addEventListener('click', (event) => {
     event.preventDefault()
-    newPostContainer = document.createElement("li")
-    newPostTitle = document.createElement("h3")
-    newPostTitle.textContent = title.value
-    newPostContent = document.createElement("div")
-    newPostContent.textContent = content.value
-    newPostContainer.append(newPostTitle, newPostContent)
-    blogs.append(newPostContainer)
+    postContainer = document.createElement("li")
+    postTitle = document.createElement("h3")
+    postTitle.textContent = title.value
+    postContent = document.createElement("div")
+    postContent.textContent = content.value
+    postContainer.append(postTitle, postContent)
+    myPosts[myPosts.length] = postContainer
+    blogs.append(postContainer)
     title.value = ''
     content.value = ''
-    myPosts[myPosts.length] = newPostContainer
-    localStorage.setItem('myPosts',JSON.stringify(myPosts))
+
+    localStorage.setItem('myPosts', JSON.stringify(myPosts))
 })
-
-
-
 
 
 
