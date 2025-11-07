@@ -18,7 +18,9 @@ submit.addEventListener('click', (event) => {
     postContent = document.createElement("div")
     postContent.textContent = content.value
     console.log('postContent'+JSON.stringify(postContent))
-    postContainer.append(postTitle, postContent)
+    postDelete = document.createElement("button")
+    postDelete.textContent = 'Delete'
+    postContainer.append(postTitle, postContent, postDelete)
     console.log('postContainer'+JSON.stringify(postContainer))
     myPosts[myPosts.length] = postContainer
     console.log('myPosts'+JSON.stringify(myPosts))
