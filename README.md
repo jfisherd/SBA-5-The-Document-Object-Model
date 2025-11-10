@@ -19,10 +19,11 @@ Your blog posts are saved if you refresh the page<br>
 
 
 ## Reflection
-> What steps did you take to ensure [accurate updates to the total price]?
-
+> What steps did you take to ensure inputs to the form were valid?
+event.preventDefault() was used to prevent the page from refreshing
 
 > What challenges did you face? How did you approach the?
-
-
+Checking for validity. A function to check for validity was written since the check is required for many possible user responses.
+<br>
+Saving to local storage was difficult. Attempts resulted in storing empty objects.
 <br>
